@@ -1,4 +1,4 @@
-package org.extvos.builtin.config;
+package org.extvos.builtin.version.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

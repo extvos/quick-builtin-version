@@ -1,6 +1,6 @@
-package org.extvos.builtin.controller;
+package org.extvos.builtin.version.controller;
 
-import org.extvos.builtin.config.GitProperties;
+import org.extvos.builtin.version.config.GitProperties;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +18,7 @@ import java.util.Map;
 @RequestMapping("/_builtin/version")
 public class VersionController {
 
-    @ApiOperation(value = "版本原始信息", notes = "编译时打包的版本原始信息")
+    @ApiOperation(value = "原始信息", notes = "编译时打包的版本原始信息")
     @ResponseBody
     @GetMapping("/raw")
     public String getVersionRaw() {

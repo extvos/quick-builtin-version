@@ -1,0 +1,35 @@
+package org.extvos.builtin.version.config;
+
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.Contact;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+
+/**
+ * @author Mingcai SHEN
+ */
+@EntityScan("org.extvos.builtin.entity")
+@MapperScan("org.extvos.builtin.mapper")
+@ComponentScan(basePackages = "org.extvos.builtin")
+public class BuiltinAutoConfigure {
+    @Bean
+    public Docket createVersionDocket() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .groupName("版本信息服务")
+                .apiInfo(new ApiInfoBuilder()
+                        .title("版本信息服务")
+                        .description("Builtin  Version services for generic use.")
+                        .contact(new Contact("Mingcai SHEN","https://gitlab.inodes.cn/","archsh@gmail.com"))
+                        .termsOfServiceUrl("https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-builtin-version.git")
+                        .version(getClass().getPackage().getImplementationVersion())
+                        .build())
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("org.extvos.builtin.version"))
+                .build();
+    }
+}
