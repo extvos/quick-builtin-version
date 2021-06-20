@@ -31,7 +31,7 @@ import java.util.Map;
  * "git.dirty" : "true",
  * "git.local.branch.ahead" : "0",
  * "git.local.branch.behind" : "0",
- * "git.remote.origin.url" : "https://gitlab.inodes.cn/quickstart/backend-server.git",
+ * "git.remote.origin.url" : "https://github.com/quickstart/backend-server.git",
  * "git.tags" : "",
  * "git.total.commit.count" : "18"
  * }
