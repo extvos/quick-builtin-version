@@ -1,6 +1,6 @@
-package org.extvos.builtin.version.controller;
+package plus.extvos.builtin.version.controller;
 
-import org.extvos.builtin.version.config.GitProperties;
+import plus.extvos.builtin.version.config.GitProperties;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;

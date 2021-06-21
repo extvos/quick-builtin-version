@@ -1,4 +1,4 @@
-package org.extvos.builtin.version.config;
+package plus.extvos.builtin.version.config;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -13,9 +13,9 @@ import springfox.documentation.spring.web.plugins.Docket;
 /**
  * @author Mingcai SHEN
  */
-@EntityScan("org.extvos.builtin.entity")
-@MapperScan("org.extvos.builtin.mapper")
-@ComponentScan(basePackages = "org.extvos.builtin")
+@EntityScan("plus.extvos.builtin.entity")
+@MapperScan("plus.extvos.builtin.mapper")
+@ComponentScan(basePackages = "plus.extvos.builtin")
 public class BuiltinAutoConfigure {
     @Bean
     public Docket createVersionDocket() {
@@ -29,7 +29,7 @@ public class BuiltinAutoConfigure {
                         .version(getClass().getPackage().getImplementationVersion())
                         .build())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("org.extvos.builtin.version"))
+                .apis(RequestHandlerSelectors.basePackage("plus.extvos.builtin.version"))
                 .build();
     }
 }

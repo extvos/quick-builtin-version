@@ -7,7 +7,7 @@
 1. `POM`依赖
     ```xml
     <dependency>
-        <groupId>org.extvos.builtin</groupId>
+        <groupId>plus.extvos.builtin</groupId>
         <artifactId>quick-builtin-version</artifactId>
         <version>1.0.0</version>
     </dependency>
