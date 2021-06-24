@@ -20,16 +20,16 @@ public class BuiltinAutoConfigure {
     @Bean
     public Docket createVersionDocket() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("版本信息服务")
-                .apiInfo(new ApiInfoBuilder()
-                        .title("版本信息服务")
-                        .description("Builtin  Version services for generic use.")
-                        .contact(new Contact("Mingcai SHEN","https://github.com/","archsh@gmail.com"))
-                        .termsOfServiceUrl("https://github.com/quickstart/java-scaffolds/quick-builtin-version.git")
-                        .version(getClass().getPackage().getImplementationVersion())
-                        .build())
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("plus.extvos.builtin.version"))
-                .build();
+            .groupName("版本信息服务")
+            .apiInfo(new ApiInfoBuilder()
+                .title("版本信息服务")
+                .description("Builtin  Version services for generic use.")
+                .contact(new Contact("Mingcai SHEN", "https://github.com/", "archsh@gmail.com"))
+                .termsOfServiceUrl("https://github.com/quickstart/java-scaffolds/quick-builtin-version.git")
+                .version(getClass().getPackage().getImplementationVersion())
+                .build())
+            .select()
+            .apis(RequestHandlerSelectors.basePackage("plus.extvos.builtin.version"))
+            .build();
     }
 }
