@@ -23,7 +23,7 @@ public class BuiltinAutoConfigure {
                 .title("版本信息服务")
                 .description("Builtin  Version services for generic use.")
                 .contact(new Contact("Mingcai SHEN", "https://github.com/", "archsh@gmail.com"))
-                .termsOfServiceUrl("https://github.com/quickstart/java-scaffolds/quick-builtin-version.git")
+                .termsOfServiceUrl("https://github.com/extvos/quick-builtin-version.git")
                 .version(getClass().getPackage().getImplementationVersion())
                 .build())
             .select()
