@@ -17,7 +17,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 @ComponentScan(basePackages = "plus.extvos.builtin")
 public class BuiltinAutoConfigure {
     @Bean
-    @ConditionalOnProperty(prefix = "spring.swagger", name = "enabled", havingValue = "true")
+    @ConditionalOnProperty(prefix = "spring.swagger", name = "disabled", havingValue = "false", matchIfMissing = true)
     public Docket createVersionDocket() {
         return new Docket(DocumentationType.SWAGGER_2)
             .groupName("版本信息服务")
