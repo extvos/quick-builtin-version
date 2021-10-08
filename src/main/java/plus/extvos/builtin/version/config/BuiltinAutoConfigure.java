@@ -1,5 +1,6 @@
 package plus.extvos.builtin.version.config;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -16,6 +17,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 @ComponentScan(basePackages = "plus.extvos.builtin")
 public class BuiltinAutoConfigure {
     @Bean
+    @ConditionalOnProperty(prefix = "spring.swagger", name = "enabled", havingValue = "true")
     public Docket createVersionDocket() {
         return new Docket(DocumentationType.SWAGGER_2)
             .groupName("版本信息服务")
