@@ -1,6 +1,8 @@
 package plus.extvos.builtin.version.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -49,6 +51,8 @@ public class GitProperties {
     public static final String BUILD_TIME = "git.build.time";
     public static final String COMMIT_TIME = "git.commit.time";
     public static final String COMMIT_MSG = "git.commit.message.full";
+
+    private final static Logger log = LoggerFactory.getLogger(GitProperties.class);
 
     static class Properties extends HashMap<String, Object> {
 
@@ -116,7 +120,8 @@ public class GitProperties {
             }
             reader.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error(">>", e);
+
         }
         return result.toString();
     }
