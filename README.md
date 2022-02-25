@@ -9,7 +9,7 @@
     <dependency>
         <groupId>plus.extvos.builtin</groupId>
         <artifactId>quick-builtin-version</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </dependency>
     ```
 2. `POM`的`plugin`配置
